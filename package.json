@@ -1,0 +1,19 @@
+{
+  "name": "application-de-gestion-des-reservations",
+  "version": "1.0.0",
+  "description": "API pour la gestion des réservations d'événements en ligne",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "jsonwebtoken": "^8.5.1",
+    "body-parser": "^1.19.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
