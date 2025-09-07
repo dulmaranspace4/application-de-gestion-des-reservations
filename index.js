@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb://localhost:27017/reservations', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/reservations', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Base de données MongoDB connectée !'))
   .catch(err => console.error('Erreur de connexion à MongoDB :', err));
 
