@@ -1,11 +1,10 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Connecting to MongoDB database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/reservations', { useNewUrlParser: true, useUnifiedTopology: true })
