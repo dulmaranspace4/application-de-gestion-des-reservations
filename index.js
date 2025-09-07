@@ -7,13 +7,13 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 
-// Connexion à la base de données MongoDB
+// Connecting to MongoDB database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/reservations', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Base de données MongoDB connectée !'))
-  .catch(err => console.error('Erreur de connexion à MongoDB :', err));
+  .then(() => console.log('MongoDB database connected!'))
+  .catch(err => console.error('Connection error to MongoDB:', err));
 
-// Début du serveur
+// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
